@@ -1,17 +1,45 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, VStack, Heading, SimpleGrid, Box, Text, Stat, StatLabel, StatNumber, StatHelpText } from "@chakra-ui/react";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container maxW="container.xl" p={4}>
+      <VStack spacing={4} align="stretch">
+        <Heading as="h1" size="xl" textAlign="center" mb={6}>
+          Business Dashboard
+        </Heading>
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+          <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Stat>
+              <StatLabel>Total Sales</StatLabel>
+              <StatNumber>$50,000</StatNumber>
+              <StatHelpText>Jan 1 - Apr 1</StatHelpText>
+            </Stat>
+          </Box>
+          <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Stat>
+              <StatLabel>Revenue</StatLabel>
+              <StatNumber>$120,000</StatNumber>
+              <StatHelpText>Jan 1 - Apr 1</StatHelpText>
+            </Stat>
+          </Box>
+          <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Stat>
+              <StatLabel>New Customers</StatLabel>
+              <StatNumber>1,200</StatNumber>
+              <StatHelpText>Jan 1 - Apr 1</StatHelpText>
+            </Stat>
+          </Box>
+        </SimpleGrid>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mt={10}>
+          <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Heading as="h3" size="lg" mb={4}>Monthly Sales</Heading>
+            <Text>Chart Placeholder</Text>
+          </Box>
+          <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
+            <Heading as="h3" size="lg" mb={4}>Revenue Breakdown</Heading>
+            <Text>Chart Placeholder</Text>
+          </Box>
+        </SimpleGrid>
       </VStack>
     </Container>
   );
